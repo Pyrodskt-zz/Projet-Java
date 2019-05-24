@@ -1,6 +1,7 @@
 package model;
 
 import java.sql.Connection;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import entity.Entity;
@@ -81,7 +82,13 @@ abstract class DAOEntity<E extends Entity> {
 	 * @param code
 	 *          the code
 	 * @return the e
+	 * @throws SQLException 
 	 */
-	public abstract E find(String code);
+	public abstract ResultSet find(String code) throws SQLException;
+
+	public ResultSet findLoadMap(int id) throws SQLException {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
 }

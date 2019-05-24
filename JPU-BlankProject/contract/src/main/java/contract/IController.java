@@ -1,5 +1,7 @@
 package contract;
 
+import java.sql.SQLException;
+
 /**
  * The Interface IController.
  *
@@ -17,6 +19,7 @@ public interface IController {
 	 *
 	 * @param controllerOrder
 	 *          the controller order
+	 * @throws SQLException 
 	 */
-	public void orderPerform(ControllerOrder controllerOrder);
+	public void orderPerform(ControllerOrder controllerOrder) throws SQLException;
 }

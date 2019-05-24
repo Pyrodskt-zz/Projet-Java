@@ -1,8 +1,10 @@
 package contract;
 
+import java.sql.SQLException;
 import java.util.Observable;
 
 import entity.HelloWorld;
+import entity.Map;
 
 /**
  * The Interface IModel.
@@ -16,15 +18,16 @@ public interface IModel {
 	 *
 	 * @return the helloworld entity
 	 */
-	HelloWorld getHelloWorld();
+	
+	Map getMapMap();
+	void loadMap() throws SQLException;
 
 	/**
 	 * Load the message.
 	 *
 	 * @param code
 	 *          the code
-	 */
-	void loadHelloWorld(String code);
+
 
 	/**
 	 * Gets the observable.

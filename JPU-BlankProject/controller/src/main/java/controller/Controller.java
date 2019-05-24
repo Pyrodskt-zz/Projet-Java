@@ -1,5 +1,7 @@
 package controller;
 
+import java.sql.SQLException;
+
 import contract.ControllerOrder;
 import contract.IController;
 import contract.IModel;
@@ -66,25 +68,26 @@ public final class Controller implements IController {
      *
      * @param controllerOrder
      *            the controller order
+	 * @throws SQLException 
      */
 	/*
 	 * (non-Javadoc)
 	 *
 	 * @see contract.IController#orderPerform(contract.ControllerOrder)
 	 */
-	public void orderPerform(final ControllerOrder controllerOrder) {
+	public void orderPerform(final ControllerOrder controllerOrder) throws SQLException {
 		switch (controllerOrder) {
 			case English:
-				this.model.loadHelloWorld("GB");
+				this.model.loadMap();
 				break;
 			case Francais:
-				this.model.loadHelloWorld("FR");
+				this.model.loadMap();
 				break;
 			case Deutsch:
-				this.model.loadHelloWorld("DE");
+				this.model.loadMap();
 				break;
 			case Indonesia:
-				this.model.loadHelloWorld("ID");
+				this.model.loadMap();
 				break;
 			default:
 				break;

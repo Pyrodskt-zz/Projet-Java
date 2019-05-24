@@ -1,7 +1,9 @@
 package model;
 
+import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 /**
@@ -23,6 +25,9 @@ final class DBConnection {
 		this.open();
 	}
 
+
+	
+	
 	/**
 	 * Gets the single instance of DBConnection.
 	 *
@@ -50,6 +55,7 @@ final class DBConnection {
 		} catch (final SQLException e) {
 			e.printStackTrace();
 		}
+		System.out.println("Connected");
 		return true;
 	}
 
